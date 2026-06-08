@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heart.exe</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="menu">
+
+    <h1>Heart.exe</h1>
+
+    <button class="menu-btn"
+    onclick="startGame()">
+        Iniciar
+    </button>
+
+    <button class="menu-btn"
+    onclick="toggleVolume()"
+    id="volumeBtn">
+        Volume: ON
+    </button>
+
+</div>
+
+<div id="pauseMenu">
+
+    <h1 style="font-size:60px;">
+        PAUSED
+    </h1>
+
+    <button class="menu-btn"
+    onclick="resumeGame()">
+        Continuar
+    </button>
+
+    <button class="menu-btn"
+    onclick="restartGame()">
+        Restart
+    </button>
+
+    <button class="menu-btn"
+    onclick="returnToMenu()">
+        Menu Principal
+    </button>
+
+</div>
+
+<div id="gameOverMenu">
+
+    <h1 style="font-size:72px;">
+        GAME OVER
+    </h1>
+
+    <button class="menu-btn"
+    onclick="restartGame()">
+        Restart
+    </button>
+
+    <button class="menu-btn"
+    onclick="returnToMenu()">
+        Menu Principal
+    </button>
+
+</div>
+
+<div id="skillUnlock">
+
+    <h1 style="font-size:54px;">
+        NOVA HABILIDADE
+    </h1>
+
+    <div id="skillText"
+    style="
+    color:white;
+    font-size:28px;
+    margin:30px;
+    ">
+    </div>
+
+    <button class="menu-btn"
+    onclick="continueUpgrade()">
+        Continuar
+    </button>
+
+</div>
+
+<div id="upgradeScreen">
+
+    <h1 style="font-size:54px;">
+        SYSTEM UPGRADE
+    </h1>
+
+    <button class="menu-btn"
+    onclick="chooseUpgrade('hp')">
+        +30 HP
+    </button>
+
+    <button class="menu-btn"
+    onclick="chooseUpgrade('damage')">
+        +25% DAMAGE
+    </button>
+
+    <button class="menu-btn"
+    onclick="chooseUpgrade('defense')">
+        +3 DEFENSE
+    </button>
+
+</div>
+
+<div id="dialogue"></div>
+
+<canvas id="game"></canvas>
+
+<script src="js/input/input.js"></script>
+<script src="js/enemies/enemy.js"></script>
+<script src="js/fragments/fragment.js"></script>
+<script src="js/player/projectile.js"></script>
+<script src="js/player/player.js"></script>
+<script src="js/player/friend.js"></script>
+<script src="js/render/renderer.js"></script>
+<script src="js/audio/audio.js"></script>
+<script src="js/ui/dialogue.js"></script>
+<script src="js/ui/hud.js"></script>
+<script src="js/levels/level1.js"></script>
+<script src="js/levels/level2.js"></script>
+<script src="js/levels/level3.js"></script>
+<script src="js/levels/level4.js"></script>
+<script src="js/levels/level5.js"></script>
+<script src="js/levels/platforms.js"></script>
+<script src="js/ui/menus.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
